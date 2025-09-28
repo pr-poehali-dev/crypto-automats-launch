@@ -57,15 +57,16 @@ const Index = () => {
           <div className="absolute bottom-32 left-32 w-20 h-20 rounded-full bg-crypto-yellow animate-float"></div>
         </div>
 
+        {/* Logo в левом верхнем углу */}
+        <div className="absolute top-4 left-4 z-20">
+          <img 
+            src="https://cdn.poehali.dev/files/5fed840c-25ac-4760-a0cf-7757662357af.png" 
+            alt="CryptoLes Logo" 
+            className="h-16 w-auto"
+          />
+        </div>
+
         <div className="relative z-10 text-center max-w-6xl mx-auto">
-          {/* Logo */}
-          <div className="mb-8 animate-fade-in">
-            <img 
-              src="https://cdn.poehali.dev/files/5fed840c-25ac-4760-a0cf-7757662357af.png" 
-              alt="CryptoLes Logo" 
-              className="mx-auto h-32 w-auto mb-4"
-            />
-          </div>
 
           {/* Main Heading */}
           <h1 className="text-5xl md:text-7xl font-bold mb-6 animate-fade-in">
