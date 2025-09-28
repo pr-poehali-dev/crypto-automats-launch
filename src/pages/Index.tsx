@@ -255,16 +255,17 @@ const Index = () => {
       </section>
 
       {/* Footer */}
-      <footer className="py-12 px-4 bg-white border-t border-gray-200">
-        <div className="max-w-6xl mx-auto text-center">
-          <div className="mb-8">
-            <img 
-              src="https://cdn.poehali.dev/files/5fed840c-25ac-4760-a0cf-7757662357af.png" 
-              alt="CryptoLes" 
-              className="mx-auto h-20 w-auto"
-            />
-          </div>
+      <footer className="relative py-12 px-4 bg-white border-t border-gray-200">
+        {/* Logo в левом нижнем углу */}
+        <div className="absolute bottom-0 left-0 w-full h-full">
+          <img 
+            src="https://cdn.poehali.dev/files/5fed840c-25ac-4760-a0cf-7757662357af.png" 
+            alt="CryptoLes" 
+            className="absolute bottom-0 left-0 h-full w-auto opacity-10"
+          />
+        </div>
 
+        <div className="relative z-10 max-w-6xl mx-auto text-center">
           <div className="flex justify-center space-x-8 mb-8">
             <a 
               href="https://t.me/cryptoatm_channel" 
