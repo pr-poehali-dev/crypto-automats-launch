@@ -63,7 +63,7 @@ const Index = () => {
             <img 
               src="https://cdn.poehali.dev/files/5fed840c-25ac-4760-a0cf-7757662357af.png" 
               alt="CryptoLes Logo" 
-              className="mx-auto h-32 w-auto mb-4"
+              className="mx-auto w-full max-w-4xl h-auto mb-4"
             />
           </div>
 
