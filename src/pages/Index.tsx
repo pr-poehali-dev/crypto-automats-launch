@@ -47,17 +47,10 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-emerald-900 via-teal-800 to-green-900" style={{backgroundImage: `url('https://cdn.poehali.dev/files/b606c834-9e13-47b4-9e80-df8b3311c029.png')`, backgroundSize: 'cover', backgroundPosition: 'center', backgroundBlendMode: 'overlay'}}>
+    <div className="min-h-screen bg-gradient-to-br from-emerald-900 via-teal-800 to-green-900">
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center px-4 overflow-hidden">
-        {/* Леший с криптоматом */}
-        <div className="absolute bottom-0 right-0 z-10 opacity-60">
-          <img 
-            src="https://cdn.poehali.dev/files/f27d321a-872a-4608-ba4c-7564192aa5da.png" 
-            alt="Леший с криптоматом" 
-            className="h-96 w-auto"
-          />
-        </div>
+
         {/* Магические криптовалютные элементы */}
         <div className="absolute inset-0 opacity-30">
           <div className="absolute top-20 left-20 w-16 h-16 rounded-full bg-amber-400 animate-float flex items-center justify-center text-white font-bold">₿</div>
@@ -66,14 +59,7 @@ const Index = () => {
           <div className="absolute top-1/3 left-1/2 w-10 h-10 rounded-full bg-purple-400 animate-pulse-crypto flex items-center justify-center text-white text-xs">◆</div>
         </div>
 
-        {/* Logo в левом верхнем углу */}
-        <div className="absolute top-4 left-4 z-20">
-          <img 
-            src="https://cdn.poehali.dev/files/5fed840c-25ac-4760-a0cf-7757662357af.png" 
-            alt="CryptoLes Logo" 
-            className="h-16 w-auto"
-          />
-        </div>
+
 
         <div className="relative z-10 text-center max-w-6xl mx-auto">
 
