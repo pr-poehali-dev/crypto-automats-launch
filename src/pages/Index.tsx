@@ -261,7 +261,7 @@ const Index = () => {
           <img 
             src="https://cdn.poehali.dev/files/5fed840c-25ac-4760-a0cf-7757662357af.png" 
             alt="CryptoLes" 
-            className="absolute bottom-0 left-0 h-full w-auto opacity-10"
+            className="absolute bottom-0 left-0 h-full w-auto"
           />
         </div>
 
