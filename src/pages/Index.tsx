@@ -15,7 +15,6 @@ const Index = () => {
 
   const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
-  const [soundEnabled, setSoundEnabled] = useState(false);
 
   // Создание падающих листьев
   useEffect(() => {
@@ -45,21 +44,6 @@ const Index = () => {
       clearInterval(leafInterval);
     };
   }, []);
-
-  // Звуки леса
-  const toggleSound = () => {
-    setSoundEnabled(!soundEnabled);
-    const audio = document.getElementById('forest-audio') as HTMLAudioElement;
-    if (audio) {
-      if (!soundEnabled) {
-        audio.play().catch(() => {});
-        audio.loop = true;
-        audio.volume = 0.3;
-      } else {
-        audio.pause();
-      }
-    }
-  };
 
   useEffect(() => {
     // Countdown до нового года 2026 (Екатеринбург время UTC+5)
@@ -93,22 +77,8 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-emerald-900 via-teal-800 to-green-900 relative overflow-hidden">
-      {/* Звуки леса */}
-      <audio id="forest-audio" className="forest-sounds">
-        <source src="data:audio/wav;base64,UklGRnoGAABXQVZFZm10IBAAAAABAAEAQB8AAEAfAAABAAgAZGF0YQoGAACBhYqFbF1fdJivrJBhNjVgodDbq2EcBj+a2/LDciUFLIHO8tiJNwgZaLvt559NEAxQp+PwtmMcBjiR1/LMeSwFJHfH8N2QQAoUXrTp66hVFApGn+DyvmwhCjyA0fPVdSEGK4TO9MBOEwpL" type="audio/wav" />
-      </audio>
-
       {/* Падающие листья */}
       <div className="falling-leaves"></div>
-
-      {/* Кнопка звука */}
-      <button 
-        onClick={toggleSound}
-        className="fixed top-4 right-4 z-50 bg-emerald-700/80 backdrop-blur-sm text-white p-2 sm:p-3 rounded-full hover:bg-emerald-600/80 transition-all"
-        title={soundEnabled ? 'Выключить звуки леса' : 'Включить звуки леса'}
-      >
-        <Icon name={soundEnabled ? 'VolumeX' : 'Volume2'} size={18} className="sm:w-5 sm:h-5" />
-      </button>
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 overflow-hidden">
 
