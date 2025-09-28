@@ -114,4 +114,15 @@
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
+
+  .forest-gradient {
+    background: linear-gradient(135deg, #10b981 0%, #f59e0b 100%);
+  }
+
+  .forest-text-gradient {
+    background: linear-gradient(135deg, #10b981 0%, #f59e0b 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
 }

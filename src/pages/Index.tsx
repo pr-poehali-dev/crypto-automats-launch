@@ -47,14 +47,23 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800">
+    <div className="min-h-screen bg-gradient-to-br from-emerald-900 via-teal-800 to-green-900" style={{backgroundImage: `url('https://cdn.poehali.dev/files/b606c834-9e13-47b4-9e80-df8b3311c029.png')`, backgroundSize: 'cover', backgroundPosition: 'center', backgroundBlendMode: 'overlay'}}>
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center px-4 overflow-hidden">
-        {/* Background Animation */}
-        <div className="absolute inset-0 opacity-20">
-          <div className="absolute top-20 left-20 w-32 h-32 rounded-full bg-crypto-orange animate-float"></div>
-          <div className="absolute top-40 right-32 w-24 h-24 rounded-full bg-crypto-blue animate-pulse-crypto"></div>
-          <div className="absolute bottom-32 left-32 w-20 h-20 rounded-full bg-crypto-yellow animate-float"></div>
+        {/* Леший с криптоматом */}
+        <div className="absolute bottom-0 right-0 z-10 opacity-60">
+          <img 
+            src="https://cdn.poehali.dev/files/f27d321a-872a-4608-ba4c-7564192aa5da.png" 
+            alt="Леший с криптоматом" 
+            className="h-96 w-auto"
+          />
+        </div>
+        {/* Магические криптовалютные элементы */}
+        <div className="absolute inset-0 opacity-30">
+          <div className="absolute top-20 left-20 w-16 h-16 rounded-full bg-amber-400 animate-float flex items-center justify-center text-white font-bold">₿</div>
+          <div className="absolute top-40 right-32 w-12 h-12 rounded-full bg-blue-400 animate-pulse-crypto flex items-center justify-center text-white text-sm">Ξ</div>
+          <div className="absolute bottom-32 left-32 w-14 h-14 rounded-full bg-green-400 animate-float flex items-center justify-center text-white font-bold">₮</div>
+          <div className="absolute top-1/3 left-1/2 w-10 h-10 rounded-full bg-purple-400 animate-pulse-crypto flex items-center justify-center text-white text-xs">◆</div>
         </div>
 
         {/* Logo в левом верхнем углу */}
@@ -69,22 +78,22 @@ const Index = () => {
         <div className="relative z-10 text-center max-w-6xl mx-auto">
 
           {/* Main Heading */}
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 animate-fade-in">
-            <span className="crypto-text-gradient">Скоро появится</span>
+          <h1 className="text-5xl md:text-7xl font-bold mb-6 animate-fade-in text-shadow-lg">
+            <span className="text-amber-300 drop-shadow-2xl">Леший приносит</span>
             <br />
-            <span className="text-white">сеть криптоматов!</span>
+            <span className="text-white drop-shadow-2xl">цифровое золото!</span>
           </h1>
 
           {/* Subtitle */}
-          <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto animate-fade-in">
-            Покупайте и продавайте криптовалюту быстро, безопасно и без посредников.
+          <p className="text-xl md:text-2xl text-green-100 mb-12 max-w-4xl mx-auto animate-fade-in drop-shadow-lg">
+            Мистический лес цифровых валют открывает свои тайны!
             <br />
-            Первая в регионе сеть автоматов для покупки BTC, USDT и других криптовалют на наличные — и наоборот.
+            Первая в регионе сеть магических автоматов для обмена BTC, USDT и других сокровищ на золотые монеты.
           </p>
 
           {/* Countdown Timer */}
           <div className="mb-12 animate-fade-in">
-            <h3 className="text-2xl text-white mb-6">До запуска осталось:</h3>
+            <h3 className="text-2xl text-amber-200 mb-6 drop-shadow-lg">До пробуждения леса осталось:</h3>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-2xl mx-auto">
               {[
                 { label: 'Дней', value: countdown.days },
@@ -92,11 +101,11 @@ const Index = () => {
                 { label: 'Минут', value: countdown.minutes },
                 { label: 'Секунд', value: countdown.seconds }
               ].map((item, index) => (
-                <Card key={index} className="bg-white/10 backdrop-blur-lg border-white/20 p-6">
-                  <div className="text-3xl md:text-4xl font-bold text-white mb-2">
+                <Card key={index} className="bg-emerald-900/40 backdrop-blur-lg border-amber-400/30 p-6 shadow-2xl">
+                  <div className="text-3xl md:text-4xl font-bold text-amber-300 mb-2 drop-shadow-lg">
                     {item.value.toString().padStart(2, '0')}
                   </div>
-                  <div className="text-gray-300 text-sm uppercase tracking-wider">
+                  <div className="text-green-200 text-sm uppercase tracking-wider">
                     {item.label}
                   </div>
                 </Card>
@@ -107,61 +116,61 @@ const Index = () => {
           {/* CTA Button */}
           <Button 
             size="lg" 
-            className="crypto-gradient text-white font-semibold px-8 py-4 text-lg hover:scale-105 transition-transform animate-fade-in"
+            className="bg-gradient-to-r from-amber-600 to-orange-600 hover:from-amber-500 hover:to-orange-500 text-white font-semibold px-8 py-4 text-lg hover:scale-105 transition-all animate-fade-in shadow-2xl"
             onClick={() => document.getElementById('subscribe')?.scrollIntoView({ behavior: 'smooth' })}
           >
-            Узнать первым о запуске
-            <Icon name="ArrowRight" className="ml-2" size={20} />
+            Войти в магический лес
+            <Icon name="TreePine" className="ml-2" size={20} />
           </Button>
         </div>
       </section>
 
       {/* Features Section */}
-      <section className="py-20 px-4 bg-white/5 backdrop-blur-sm">
+      <section className="py-20 px-4 bg-emerald-900/20 backdrop-blur-sm">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-bold text-center text-white mb-16">
-            Ключевые <span className="crypto-text-gradient">преимущества</span>
+          <h2 className="text-4xl md:text-5xl font-bold text-center text-amber-200 mb-16 drop-shadow-lg">
+            Дары <span className="text-green-300">лесного духа</span>
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
-                icon: 'MapPin',
-                title: 'Удобное расположение',
-                description: 'Криптоматы по всему городу — найдите ближайший к вам'
+                icon: 'TreePine',
+                title: 'Тайные тропы',
+                description: 'Криптоматы спрятаны по всему городу — найдите ближайший портал'
               },
               {
-                icon: 'Zap',
-                title: 'Мгновенные транзакции',
-                description: 'Обмен криптовалют происходит за считанные минуты'
+                icon: 'Sparkles',
+                title: 'Магия мгновения',
+                description: 'Обмен криптовалют происходит быстрее лесного ветра'
               },
               {
-                icon: 'Shield',
-                title: 'Полная анонимность',
-                description: 'Безопасные операции без верификации и KYC до 100 тысяч рублей'
+                icon: 'Eye',
+                title: 'Невидимый обмен',
+                description: 'Лешиий не расскажет ваши секреты до 100 тысяч золотых'
               },
               {
-                icon: 'Coins',
-                title: 'Поддержка популярных монет',
-                description: 'BTC, ETH, USDT и другие топовые криптовалюты'
+                icon: 'Gem',
+                title: 'Сокровища леса',
+                description: 'BTC, ETH, USDT и другие цифровые самоцветы'
               },
               {
-                icon: 'Smartphone',
-                title: 'Простой интерфейс',
-                description: 'Интуитивно понятно даже новичкам в криптомире'
+                icon: 'Wand2',
+                title: 'Простая магия',
+                description: 'Даже лесные духи поймут этот интерфейс'
               },
               {
-                icon: 'Clock',
-                title: 'Работа 24/7',
-                description: 'Доступ к криптовалютам в любое время суток'
+                icon: 'Moon',
+                title: 'Ночная стража',
+                description: 'Лешиий не спит — работает при луне и солнце'
               }
             ].map((feature, index) => (
-              <Card key={index} className="bg-white/10 backdrop-blur-lg border-white/20 p-6 hover:bg-white/15 transition-all hover:scale-105">
-                <div className="crypto-gradient w-12 h-12 rounded-lg flex items-center justify-center mb-4">
+              <Card key={index} className="bg-emerald-900/30 backdrop-blur-lg border-amber-400/30 p-6 hover:bg-emerald-800/40 transition-all hover:scale-105 shadow-xl">
+                <div className="bg-gradient-to-br from-amber-500 to-orange-500 w-12 h-12 rounded-lg flex items-center justify-center mb-4 shadow-lg">
                   <Icon name={feature.icon as any} className="text-white" size={24} />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p>
+                <h3 className="text-xl font-semibold text-amber-200 mb-3 drop-shadow">{feature.title}</h3>
+                <p className="text-green-200">{feature.description}</p>
               </Card>
             ))}
           </div>
