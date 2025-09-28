@@ -321,12 +321,7 @@ const Index = () => {
               <Icon name="MessageCircle" className="mr-2" size={18} />
               Telegram канал
             </a>
-            <a 
-              href="#" 
-              className="text-gray-600 hover:text-crypto-blue transition-colors text-sm sm:text-base"
-            >
-              Политика конфиденциальности
-            </a>
+
           </div>
 
           <p className="text-gray-500 text-sm sm:text-base">© CryptoLes, 2025. Все права защищены.</p>
