@@ -167,42 +167,30 @@ const Index = () => {
       <section id="subscribe" className="py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Узнайте о запуске <span className="crypto-text-gradient">первыми!</span>
+            Подпишитесь на <span className="crypto-text-gradient">Telegram-канал!</span>
           </h2>
           <p className="text-xl text-gray-300 mb-12">
-            Оставьте свои контакты и получите уведомление, когда заработает первый криптомат
+            «Криптоматы: всё о Bitcoin-банкоматах» — узнавайте первыми о запуске и новостях
           </p>
 
           <Card className="bg-white/10 backdrop-blur-lg border-white/20 p-8 max-w-2xl mx-auto">
-            <form onSubmit={handleSubscribe} className="space-y-6">
-              <div>
-                <Input
-                  type="email"
-                  placeholder="Ваш email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  required
-                  className="bg-white/10 border-white/20 text-white placeholder:text-gray-400 h-12"
-                />
+            <div className="text-center space-y-6">
+              <div className="bg-gradient-to-r from-blue-500 to-cyan-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+                <Icon name="MessageCircle" className="text-white" size={32} />
               </div>
-              <div>
-                <Input
-                  type="tel"
-                  placeholder="Ваш телефон"
-                  value={phone}
-                  onChange={(e) => setPhone(e.target.value)}
-                  className="bg-white/10 border-white/20 text-white placeholder:text-gray-400 h-12"
-                />
-              </div>
+              <h3 className="text-2xl font-bold text-white mb-4">Криптоматы: всё о Bitcoin-банкоматах</h3>
+              <p className="text-gray-300 mb-6">
+                Новости индустрии, обзоры оборудования, локации криптоматов и эксклюзивная информация о запуске
+              </p>
               <Button 
-                type="submit" 
                 size="lg" 
                 className="crypto-gradient text-white font-semibold w-full h-12 hover:scale-105 transition-transform"
+                onClick={() => window.open('https://t.me/cryptoatm_channel', '_blank')}
               >
-                Подписаться на уведомления
-                <Icon name="Bell" className="ml-2" size={20} />
+                Подписаться на канал
+                <Icon name="ExternalLink" className="ml-2" size={20} />
               </Button>
-            </form>
+            </div>
           </Card>
         </div>
       </section>
