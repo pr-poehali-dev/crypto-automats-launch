@@ -92,7 +92,7 @@ const Index = () => {
   };
 
   return (
-    <main className="min-h-screen bg-gradient-to-br from-emerald-900 via-teal-800 to-green-900 relative overflow-hidden">
+    <div className="min-h-screen bg-gradient-to-br from-emerald-900 via-teal-800 to-green-900 relative overflow-hidden">
       {/* Звуки леса */}
       <audio id="forest-audio" className="forest-sounds">
         <source src="data:audio/wav;base64,UklGRnoGAABXQVZFZm10IBAAAAABAAEAQB8AAEAfAAABAAgAZGF0YQoGAACBhYqFbF1fdJivrJBhNjVgodDbq2EcBj+a2/LDciUFLIHO8tiJNwgZaLvt559NEAxQp+PwtmMcBjiR1/LMeSwFJHfH8N2QQAoUXrTp66hVFApGn+DyvmwhCjyA0fPVdSEGK4TO9MBOEwpL" type="audio/wav" />
@@ -126,21 +126,21 @@ const Index = () => {
 
           {/* Main Heading */}
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold mb-6 animate-fade-in text-shadow-lg px-4">
-            <span className="text-amber-300 drop-shadow-2xl">Криптоматы в</span>
+            <span className="text-amber-300 drop-shadow-2xl">Леший приносит</span>
             <br />
-            <span className="text-white drop-shadow-2xl">Екатеринбурге!</span>
+            <span className="text-white drop-shadow-2xl">цифровое золото!</span>
           </h1>
 
           {/* Subtitle */}
           <p className="text-lg sm:text-xl md:text-2xl text-green-100 mb-8 sm:mb-12 max-w-4xl mx-auto animate-fade-in drop-shadow-lg px-4 leading-relaxed">
-            Первая сеть <strong>Bitcoin-банкоматов</strong> в Екатеринбурге!
+            Мистический лес цифровых валют открывает свои тайны!
             <br className="hidden sm:block" />
-            <span className="block sm:inline">Продажа <em>Bitcoin, Ethereum, USDT</em> через автоматы. Анонимно до 100 тыс. рублей.</span>
+            <span className="block sm:inline">Первая в регионе сеть магических автоматов для продажи BTC, USDT и других сокровищ на золотые монеты.</span>
           </p>
 
           {/* Countdown Timer */}
           <div className="mb-12 animate-fade-in">
-            <h2 className="text-lg sm:text-xl md:text-2xl text-amber-200 mb-4 sm:mb-6 drop-shadow-lg px-4">До запуска криптоматов осталось:</h2>
+            <h3 className="text-lg sm:text-xl md:text-2xl text-amber-200 mb-4 sm:mb-6 drop-shadow-lg px-4">До пробуждения леса осталось:</h3>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-2 sm:gap-4 max-w-2xl mx-auto px-4">
               {[
                 { label: 'Дней', value: countdown.days },
@@ -166,7 +166,7 @@ const Index = () => {
             className="bg-gradient-to-r from-amber-600 to-orange-600 hover:from-amber-500 hover:to-orange-500 text-white font-semibold px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg hover:scale-105 transition-all animate-fade-in shadow-2xl mx-4"
             onClick={() => document.getElementById('subscribe')?.scrollIntoView({ behavior: 'smooth' })}
           >
-Подписаться на обновления
+            Войти в магический лес
             <Icon name="TreePine" className="ml-2" size={18} />
           </Button>
         </div>
@@ -176,40 +176,40 @@ const Index = () => {
       <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-emerald-900/20 backdrop-blur-sm">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-center text-amber-200 mb-8 sm:mb-12 lg:mb-16 drop-shadow-lg px-4">
-            Преимущества <span className="text-green-300">криптоматов</span>
+            Дары <span className="text-green-300">лесного духа</span>
           </h2>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
             {[
               {
-                icon: 'MapPin',
-                title: 'Локации по городу',
-                description: 'Криптоматы в ТЦ, на вокзалах, в бизнес-центрах Екатеринбурга'
+                icon: 'TreePine',
+                title: 'Тайные тропы',
+                description: 'Криптоматы спрятаны по всему городу — найдите ближайший портал'
               },
               {
-                icon: 'Zap',
-                title: 'Быстрая операция',
-                description: 'Продажа Bitcoin, Ethereum, USDT за 2-3 минуты'
+                icon: 'Sparkles',
+                title: 'Магия мгновения',
+                description: 'Продажа криптовалют происходит быстрее лесного ветра'
               },
               {
-                icon: 'Shield',
-                title: 'Анонимность',
-                description: 'Не требуется верификация при сумме до 100 тыс. рублей'
+                icon: 'Eye',
+                title: 'Невидимая продажа',
+                description: 'Лешиий не расскажет ваши секреты до 100 тысяч золотых'
               },
               {
-                icon: 'Coins',
-                title: 'Много криптовалют',
-                description: 'Bitcoin (BTC), Ethereum (ETH), Tether (USDT) и другие популярные токены'
+                icon: 'Gem',
+                title: 'Сокровища леса',
+                description: 'BTC, ETH, USDT и другие цифровые самоцветы'
               },
               {
-                icon: 'Smartphone',
-                title: 'Простой интерфейс',
-                description: 'Понятный интерфейс банкомата на русском языке'
+                icon: 'Wand2',
+                title: 'Простая магия',
+                description: 'Даже лесные духи поймут этот интерфейс'
               },
               {
-                icon: 'Clock',
-                title: 'Круглосуточно',
-                description: 'Криптоматы работают 24/7 без выходных и праздников'
+                icon: 'Moon',
+                title: 'Ночная стража',
+                description: 'Лешиий не спит — работает при луне и солнце'
               }
             ].map((feature, index) => (
               <Card key={index} className="bg-emerald-900/30 backdrop-blur-lg border-amber-400/30 p-4 sm:p-6 hover:bg-emerald-800/40 transition-all hover:scale-105 shadow-xl">
@@ -327,7 +327,7 @@ const Index = () => {
           <p className="text-gray-500 text-sm sm:text-base">© CryptoLes, 2025. Все права защищены.</p>
         </div>
       </footer>
-    </main>
+    </div>
   );
 };
 
