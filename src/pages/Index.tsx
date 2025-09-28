@@ -115,22 +115,22 @@ const Index = () => {
         <div className="relative z-10 text-center max-w-6xl mx-auto">
 
           {/* Main Heading */}
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold mb-6 animate-fade-in text-shadow-lg px-4">
-            <span className="text-amber-300 drop-shadow-2xl">Леший приносит</span>
+          <h1 className="font-slavic text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold mb-6 animate-fade-in text-shadow-lg px-4 tracking-wider">
+            <span className="text-amber-300 drop-shadow-2xl">ПОКУПАЙТЕ И</span>
             <br />
-            <span className="text-white drop-shadow-2xl">цифровое золото!</span>
+            <span className="text-white drop-shadow-2xl">ПРОДАВАЙТЕ КРИПТО!</span>
           </h1>
 
           {/* Subtitle */}
-          <p className="text-lg sm:text-xl md:text-2xl text-green-100 mb-8 sm:mb-12 max-w-4xl mx-auto animate-fade-in drop-shadow-lg px-4 leading-relaxed">
-            Мистический лес цифровых валют открывает свои тайны!
+          <p className="font-modern text-lg sm:text-xl md:text-2xl text-green-100 mb-8 sm:mb-12 max-w-4xl mx-auto animate-fade-in drop-shadow-lg px-4 leading-relaxed">
+            Первая сеть <strong>Bitcoin-банкоматов</strong> в Екатеринбурге!
             <br className="hidden sm:block" />
-            <span className="block sm:inline">Первая в регионе сеть магических автоматов для продажи BTC, USDT и других сокровищ на золотые монеты.</span>
+            <span className="block sm:inline">Продажа <em>Bitcoin, Ethereum, USDT</em> через автоматы. Анонимно до 100 тыс. рублей.</span>
           </p>
 
           {/* Countdown Timer */}
           <div className="mb-12 animate-fade-in">
-            <h3 className="text-lg sm:text-xl md:text-2xl text-amber-200 mb-4 sm:mb-6 drop-shadow-lg px-4">До пробуждения леса осталось:</h3>
+            <h2 className="font-slavic text-lg sm:text-xl md:text-2xl text-amber-200 mb-4 sm:mb-6 drop-shadow-lg px-4 tracking-wide">ДО ЗАПУСКА КРИПТОМАТОВ:</h2>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-2 sm:gap-4 max-w-2xl mx-auto px-4">
               {[
                 { label: 'Дней', value: countdown.days },
@@ -165,8 +165,8 @@ const Index = () => {
       {/* Features Section */}
       <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-emerald-900/20 backdrop-blur-sm">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-center text-amber-200 mb-8 sm:mb-12 lg:mb-16 drop-shadow-lg px-4">
-            Дары <span className="text-green-300">лесного духа</span>
+          <h2 className="font-slavic text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-center text-amber-200 mb-8 sm:mb-12 lg:mb-16 drop-shadow-lg px-4 tracking-wide">
+            ПРЕИМУЩЕСТВА <span className="text-green-300">КРИПТОМАТОВ</span>
           </h2>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
@@ -217,8 +217,8 @@ const Index = () => {
       {/* Subscribe Section */}
       <section id="subscribe" className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 sm:mb-6 px-4">
-            Подпишитесь на <span className="crypto-text-gradient">Telegram-канал!</span>
+          <h2 className="font-slavic text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 sm:mb-6 px-4 tracking-wide">
+            ПОДПИШИТЕСЬ НА <span className="crypto-text-gradient">TELEGRAM-КАНАЛ!</span>
           </h2>
           <p className="text-base sm:text-lg lg:text-xl text-gray-300 mb-8 sm:mb-12 px-4 leading-relaxed">
             «Криптоматы: всё о Bitcoin-банкоматах» — узнавайте первыми о запуске и новостях
@@ -229,7 +229,7 @@ const Index = () => {
               <div className="bg-gradient-to-r from-blue-500 to-cyan-500 w-12 h-12 sm:w-16 sm:h-16 rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-6">
                 <Icon name="MessageCircle" className="text-white" size={24} />
               </div>
-              <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-white mb-3 sm:mb-4 px-2">Криптоматы: всё о Bitcoin-банкоматах</h3>
+              <h3 className="font-modern text-lg sm:text-xl lg:text-2xl font-bold text-white mb-3 sm:mb-4 px-2">Криптоматы: всё о Bitcoin-банкоматах</h3>
               <p className="text-sm sm:text-base text-gray-300 mb-4 sm:mb-6 px-2 leading-relaxed">
                 Новости индустрии, обзоры оборудования, локации криптоматов и эксклюзивная информация о запуске
               </p>
@@ -249,8 +249,8 @@ const Index = () => {
       {/* FAQ Section */}
       <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-white/5 backdrop-blur-sm">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-center text-white mb-8 sm:mb-12 lg:mb-16 px-4">
-            Часто задаваемые <span className="crypto-text-gradient">вопросы</span>
+          <h2 className="font-slavic text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-center text-white mb-8 sm:mb-12 lg:mb-16 px-4 tracking-wide">
+            ЧАСТО ЗАДАВАЕМЫЕ <span className="crypto-text-gradient">ВОПРОСЫ</span>
           </h2>
 
           <Accordion type="single" collapsible className="space-y-3 sm:space-y-4">
