@@ -18,6 +18,11 @@ export default {
 			}
 		},
 		extend: {
+			fontFamily: {
+				'slavonic': ['"Old Standard TT"', 'serif'],
+				'sans': ['Inter', 'system-ui', 'sans-serif'],
+				'serif': ['"Old Standard TT"', 'Georgia', 'serif']
+			},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',

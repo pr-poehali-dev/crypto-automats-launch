@@ -115,10 +115,10 @@ const Index = () => {
         <div className="relative z-10 text-center max-w-6xl mx-auto">
 
           {/* Main Heading */}
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold mb-6 animate-fade-in text-shadow-lg px-4">
-            <span className="text-amber-300 drop-shadow-2xl">Леший приносит</span>
+          <h1 className="font-slavonic text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold mb-6 animate-fade-in text-shadow-lg px-4 tracking-wide">
+            <span className="text-amber-300 drop-shadow-2xl">ЛЕШИЙ ПРИНОСИТ</span>
             <br />
-            <span className="text-white drop-shadow-2xl">цифровое золото!</span>
+            <span className="text-white drop-shadow-2xl">ЦИФРОВОЕ ЗОЛОТО!</span>
           </h1>
 
           {/* Subtitle */}
@@ -130,7 +130,7 @@ const Index = () => {
 
           {/* Countdown Timer */}
           <div className="mb-12 animate-fade-in">
-            <h3 className="text-lg sm:text-xl md:text-2xl text-amber-200 mb-4 sm:mb-6 drop-shadow-lg px-4">До пробуждения леса осталось:</h3>
+            <h3 className="font-slavonic text-lg sm:text-xl md:text-2xl text-amber-200 mb-4 sm:mb-6 drop-shadow-lg px-4 tracking-wide">ДО ПРОБУЖДЕНИЯ ЛЕСА ОСТАЛОСЬ:</h3>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-2 sm:gap-4 max-w-2xl mx-auto px-4">
               {[
                 { label: 'Дней', value: countdown.days },
@@ -165,8 +165,8 @@ const Index = () => {
       {/* Features Section */}
       <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-emerald-900/20 backdrop-blur-sm">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-center text-amber-200 mb-8 sm:mb-12 lg:mb-16 drop-shadow-lg px-4">
-            Дары <span className="text-green-300">лесного духа</span>
+          <h2 className="font-slavonic text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-center text-amber-200 mb-8 sm:mb-12 lg:mb-16 drop-shadow-lg px-4 tracking-wide">
+            ДАРЫ <span className="text-green-300">ЛЕСНОГО ДУХА</span>
           </h2>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
@@ -217,8 +217,8 @@ const Index = () => {
       {/* Subscribe Section */}
       <section id="subscribe" className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 sm:mb-6 px-4">
-            Подпишитесь на <span className="crypto-text-gradient">Telegram-канал!</span>
+          <h2 className="font-slavonic text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 sm:mb-6 px-4 tracking-wide">
+            ПОДПИШИТЕСЬ НА <span className="crypto-text-gradient">TELEGRAM-КАНАЛ!</span>
           </h2>
           <p className="text-base sm:text-lg lg:text-xl text-gray-300 mb-8 sm:mb-12 px-4 leading-relaxed">
             «Криптоматы: всё о Bitcoin-банкоматах» — узнавайте первыми о запуске и новостях
@@ -249,8 +249,8 @@ const Index = () => {
       {/* FAQ Section */}
       <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-white/5 backdrop-blur-sm">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-center text-white mb-8 sm:mb-12 lg:mb-16 px-4">
-            Часто задаваемые <span className="crypto-text-gradient">вопросы</span>
+          <h2 className="font-slavonic text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-center text-white mb-8 sm:mb-12 lg:mb-16 px-4 tracking-wide">
+            ЧАСТО ЗАДАВАЕМЫЕ <span className="crypto-text-gradient">ВОПРОСЫ</span>
           </h2>
 
           <Accordion type="single" collapsible className="space-y-3 sm:space-y-4">
