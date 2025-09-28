@@ -63,7 +63,7 @@ const Index = () => {
             <img 
               src="https://cdn.poehali.dev/files/5fed840c-25ac-4760-a0cf-7757662357af.png" 
               alt="CryptoLes Logo" 
-              className="mx-auto h-24 w-auto mb-4"
+              className="mx-auto h-32 w-auto mb-4"
             />
           </div>
 
@@ -255,13 +255,13 @@ const Index = () => {
       </section>
 
       {/* Footer */}
-      <footer className="py-12 px-4 border-t border-white/20">
+      <footer className="py-12 px-4 bg-white border-t border-gray-200">
         <div className="max-w-6xl mx-auto text-center">
           <div className="mb-8">
             <img 
               src="https://cdn.poehali.dev/files/5fed840c-25ac-4760-a0cf-7757662357af.png" 
               alt="CryptoLes" 
-              className="mx-auto h-12 w-auto"
+              className="mx-auto h-20 w-auto"
             />
           </div>
 
@@ -270,20 +270,20 @@ const Index = () => {
               href="https://t.me/cryptoatm_channel" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="text-gray-300 hover:text-crypto-orange transition-colors flex items-center"
+              className="text-gray-600 hover:text-crypto-orange transition-colors flex items-center"
             >
               <Icon name="MessageCircle" className="mr-2" size={20} />
               Telegram канал
             </a>
             <a 
               href="#" 
-              className="text-gray-300 hover:text-crypto-blue transition-colors"
+              className="text-gray-600 hover:text-crypto-blue transition-colors"
             >
               Политика конфиденциальности
             </a>
           </div>
 
-          <p className="text-gray-400">© CryptoLes, 2025. Все права защищены.</p>
+          <p className="text-gray-500">© CryptoLes, 2025. Все права защищены.</p>
         </div>
       </footer>
     </div>
