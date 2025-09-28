@@ -132,53 +132,65 @@
       0 4px 6px -2px rgba(0, 0, 0, 0.6);
   }
 
-  .forest-sounds {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    z-index: -1;
-  }
-
   .falling-leaves {
     position: fixed;
     top: -10px;
+    left: 0;
     width: 100%;
     height: 100vh;
     pointer-events: none;
     z-index: 1;
     overflow: hidden;
+    /* Оптимизация для производительности */
+    will-change: transform;
+    contain: layout style paint;
   }
 
   .leaf {
     position: absolute;
-    width: 20px;
-    height: 20px;
-    background: linear-gradient(45deg, #10b981, #34d399, #f59e0b);
-    border-radius: 0 100% 0 100%;
-    transform: rotate(45deg);
+    width: 16px;
+    height: 16px;
+    background: #10b981;
+    border-radius: 0 80% 0 80%;
     animation: fall linear infinite;
-    opacity: 0.7;
+    opacity: 0.6;
+    /* GPU ускорение */
+    will-change: transform, opacity;
+    transform: translateZ(0);
+    backface-visibility: hidden;
   }
 
-  .leaf:nth-child(odd) {
-    background: linear-gradient(45deg, #f59e0b, #fbbf24, #10b981);
-    border-radius: 100% 0 100% 0;
+  .leaf:nth-child(2n) {
+    background: #f59e0b;
+    border-radius: 80% 0 80% 0;
+    width: 14px;
+    height: 14px;
   }
 
   .leaf:nth-child(3n) {
-    background: linear-gradient(45deg, #dc2626, #f97316, #eab308);
+    background: #dc2626;
+    width: 12px;
+    height: 12px;
+  }
+
+  .leaf:nth-child(4n) {
+    background: #eab308;
+    border-radius: 50%;
   }
 
   @keyframes fall {
     0% {
-      transform: translateY(-100px) rotate(0deg);
-      opacity: 1;
+      transform: translate3d(0, -50px, 0) rotate(0deg);
+      opacity: 0.8;
+    }
+    10% {
+      opacity: 0.6;
+    }
+    90% {
+      opacity: 0.3;
     }
     100% {
-      transform: translateY(calc(100vh + 100px)) rotate(360deg);
+      transform: translate3d(0, calc(100vh + 50px), 0) rotate(180deg);
       opacity: 0;
     }
   }

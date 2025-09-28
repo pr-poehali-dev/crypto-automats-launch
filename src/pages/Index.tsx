@@ -16,29 +16,49 @@ const Index = () => {
   const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
 
-  // Создание падающих листьев
+  // Оптимизированное создание падающих листьев
   useEffect(() => {
     const leavesContainer = document.querySelector('.falling-leaves');
     if (!leavesContainer) return;
 
+    let leafCount = 0;
+    const maxLeaves = 8; // Ограничиваем количество одновременных листьев
+
     const createLeaf = () => {
+      if (leafCount >= maxLeaves) return; // Не создаем слишком много листьев
+
       const leaf = document.createElement('div');
       leaf.className = 'leaf';
-      leaf.style.left = Math.random() * 100 + '%';
-      leaf.style.animationDuration = (Math.random() * 3 + 8) + 's';
-      leaf.style.animationDelay = Math.random() * 2 + 's';
+      
+      // Оптимизированные параметры
+      const leftPosition = Math.random() * 95;
+      const duration = Math.random() * 2 + 6; // 6-8 секунд
+      const delay = Math.random() * 1;
+      
+      leaf.style.left = leftPosition + '%';
+      leaf.style.animationDuration = duration + 's';
+      leaf.style.animationDelay = delay + 's';
+      
       leavesContainer.appendChild(leaf);
+      leafCount++;
 
-      // Удаление листа после анимации
-      setTimeout(() => {
+      // Удаление листа после анимации с оптимизацией
+      const cleanup = () => {
         if (leaf.parentNode) {
           leaf.parentNode.removeChild(leaf);
+          leafCount--;
         }
-      }, 12000);
+      };
+
+      // Удаляем лист после завершения анимации
+      setTimeout(cleanup, (duration + delay) * 1000 + 500);
     };
 
-    // Создание листьев каждые 2 секунды
-    const leafInterval = setInterval(createLeaf, 2000);
+    // Создаем листья реже для лучшей производительности
+    const leafInterval = setInterval(createLeaf, 3000);
+    
+    // Создаем первый лист сразу
+    createLeaf();
     
     return () => {
       clearInterval(leafInterval);
